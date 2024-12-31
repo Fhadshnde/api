@@ -19,7 +19,10 @@
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.2",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.7"
+    "netlify-cli": "^17.38.1",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^3.1.7",
+    "serverless-http": "^3.2.0"
   },
   "description": ""
 }
