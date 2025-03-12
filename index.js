@@ -30,4 +30,4 @@ connectDB().then(() => {
     });
 });
 
-module.exports = app;  // تأكد من تصدير التطبيق
+module.exports = app
