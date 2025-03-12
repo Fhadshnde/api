@@ -1,19 +1,16 @@
 {
   "version": 2,
-  "name": "Full Stack",
-  "routes": [
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "index.js",
+      "use": "@vercel/node"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      "src": "src/**/*",
+      "use": "@vercel/static"
     }
   ],
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 30
-    }
-  }
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ]
 }
