@@ -18,6 +18,13 @@ app.use(bodyParser.urlencoded({ extended: true,parameterLimit:100000, limit: '50
 app.use(express.json())
 app.use(cookieParser())
 
+const express = require('express');
+
+app.get('/', (req, res) => {
+    res.send('مرحباً بالعالم!');
+});
+
+module.exports = app;
 
 app.use("/api",router)
 
