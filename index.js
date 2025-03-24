@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const router = require('./routes');
-const testRoute = require('./routes/test'); // إضافة هذا السطر
+const testRoute = require('./routes/test');  // إضافة السطر لاستيراد المسار
 const cookieParser = require('cookie-parser');
 
 const app = express();
@@ -14,12 +14,12 @@ app.use(cors({
     credentials: true,
 }));
 app.use(bodyParser.json({ limit: '500mb' }));
-app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 100000, limit: '500mb' }));
+app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 500000, limit: '500mb' }));
 app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api", router);
-app.use("/api", testRoute); // إضافة هذا السطر
+app.use("/api", testRoute);  // إضافة السطر لتشغيل المسار
 
 const PORT = process.env.PORT || 8080;
 
